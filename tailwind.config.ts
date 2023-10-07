@@ -8,6 +8,7 @@ const config: Config = {
     "./src/layout/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  mode: "JIT",
   theme: {
     screens: {
       xs: "480px",

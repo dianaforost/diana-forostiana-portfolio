@@ -4,7 +4,8 @@ import taskpro from "../../../public/images/taskpro.jpg";
 import news from "../../../public/images/news.jpg";
 import carptravel from "../../../public/images/carp-travel.jpg";
 import show from "../../../public/images/show.jpg";
-
+import ScrollFadeIn from "@/components/ScrollFadeIn/ScrollFadeIn";
+import ReadMore from "@/components/ReadMore/ReadMore";
 const projects = [
   {
     img: consulting.src,
@@ -93,7 +94,6 @@ const projects = [
     ],
     linksText: ["Open on GitHub", "Open page"],
   },
-  // { img: group4.src, title: "Phonebook", text: "text" },
   {
     img: news.src,
     title: "News",
@@ -106,6 +106,7 @@ const projects = [
     ],
     linksText: ["Open on GitHub", "Open page"],
   },
+  // { img: group4.src, title: "Phonebook", text: "text" },
 ];
 
 export default function ProjectsSection() {
@@ -118,67 +119,49 @@ export default function ProjectsSection() {
             key={index}
             className="flex flex-col gap-[15px] sm:gap-[20px] md:gap-[25px]"
           >
-            {" "}
-            <h3 className="uppercase text-[44px] sm:text-[76px] md:text-[92px]">
-              {project.title}
-            </h3>
-            <div className="flex flex-col md:flex-row justify-between">
-              <div>
-                <img
-                  src={project.img}
-                  width={550}
-                  className="mx-[auto] border-[1px] border-solid border-[#828282]"
-                />
-              </div>
-              <div className="md:w-[50%] py-[1rem] md:p-[1rem]">
-                <h4 className="text-[16px] md:text-[18px]">{project.text}</h4>
-                <p className="italic mt-[5px]">{project.type}</p>
-                <div className="flex flex-wrap gap-x-4 gap-y-4 mt-[1rem]">
-                  {project.languages?.map((language, index) => (
-                    <div
-                      key={index}
-                      className="uppercase border-l-4 p-[0.6rem] rounded-l-[3px] border-solid border-[#0075FF]"
-                    >
-                      <p>{language}</p>
-                    </div>
-                  ))}
+            <ScrollFadeIn>
+              <h3 className="uppercase text-[38px] sm:text-[76px] md:text-[92px]">
+                {project.title}
+              </h3>
+              <div className="flex flex-col md:flex-row justify-between">
+                <div>
+                  <img
+                    src={project.img}
+                    width={550}
+                    className="mx-[auto] border-[1px] border-solid border-[#828282]"
+                  />
                 </div>
-                <div className="flex gap-[15px] sm:gap-[20px] md:gap-[25px] mt-[25px] sm:mt-[30px] md:mt-[35px]">
-                  {project.links?.map((link, index) => (
-                    <a
-                      href={link}
-                      key={index}
-                      target="_blank"
-                      referrerPolicy="no-referrer"
-                      className="follow-button border-[3px] border-solid border-[#0075FF] py-[20px] px-[3%] hover:bg-[#0075FF40] focus:bg-[#0075FF40]"
-                    >
-                      {project.linksText[index]}
-                    </a>
-                  ))}
+                <div className="md:w-[50%] py-[1rem] md:p-[1rem]">
+                  <ReadMore text={project.text} maxLength={250} />
+                  {/* <h4 className="text-[16px] md:text-[18px]">{project.text}</h4> */}
+                  <p className="italic mt-[5px]">{project.type}</p>
+                  <div className="flex flex-wrap gap-x-4 gap-y-4 mt-[1rem]">
+                    {project.languages?.map((language, index) => (
+                      <div
+                        key={index}
+                        className="uppercase border-l-4 p-[0.6rem] rounded-l-[3px] border-solid border-[#C852FF]"
+                      >
+                        <p>{language}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex gap-[15px] sm:gap-[20px] md:gap-[25px] mt-[25px] sm:mt-[30px] md:mt-[35px]">
+                    {project.links?.map((link, index) => (
+                      <a
+                        href={link}
+                        key={index}
+                        target="_blank"
+                        referrerPolicy="no-referrer"
+                        className="follow-button border-[3px] border-solid border-[#C852FF] py-[20px] px-[3%] hover:bg-[#C852FF40] focus:bg-[#C852FF40]"
+                      >
+                        {project.linksText[index]}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollFadeIn>
           </div>
-          // <ul className="grid gap-[30px]">
-          //     <li key={index} className="flex justify-between">
-          //       <h3 className="uppercase text-[44px] sm:text-[76px] md:text-[92px]">
-          //         {project.title}
-          //       </h3>
-          //       <div>
-          //         {" "}
-          //         <div>
-          //           <img
-          //             src={project.img}
-          //             width={550}
-          //             className="border-[1px] border-solid border-[#828282]"
-          //           />
-          //         </div>
-          //         <div className="w-[50%]">
-          //           <p>{project.text}</p>
-          //         </div>
-          //       </div>
-          //     </li>
-          // </ul>
         ))}
       </Container>
     </section>
