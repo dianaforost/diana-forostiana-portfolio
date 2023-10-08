@@ -23,7 +23,7 @@ const skills = [
 
 export default function SkillsSection() {
   return (
-    <section className="py-[60px] sm:py-[80px] md:py-[120px]">
+    <section className="skills-section skills-bg-mob sm:skills-bg-tab md:skills-bg-desk bg-cover bg-center bg-fixed text-center py-[60px] sm:py-[80px] md:py-[120px] md:min-h-screen text-white">
       <Container className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px]">
         <ScrollFadeIn>
           <div className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px]">

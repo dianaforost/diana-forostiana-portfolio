@@ -5,7 +5,7 @@ import ScrollIcon from "@/icons/ScrollIcon";
 
 export default function HeroSection() {
   return (
-    <section className="hero-section relative bg-[#D9D9D9] bg-cover bg-center hero-bg-mob sm:hero-bg-tab md:hero-bg-desk text-white py-[80px] sm:py-[120px] md:py-[220px] md:min-h-screen">
+    <section className="hero-section bg-fixed relative bg-[#D9D9D9] bg-cover bg-center hero-bg-mob sm:hero-bg-tab md:hero-bg-desk text-white py-[80px] sm:py-[120px] md:py-[220px] min-h-screen">
       <Container className="flex flex-col items-center text-center gap-[24px] sm:gap-[30px] md:gap-[42px]">
         <h1 className="flex flex-col text-[24px] sm:text-[32px] md:text-[48px] w-max">
           <Greetings />
