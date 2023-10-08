@@ -1,3 +1,4 @@
+import NavBar from "@/layout/NavBar/NavBar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { RocknRoll_One } from "next/font/google";
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={rocknRoll_One.className}>{children}</body>
+      <body className={rocknRoll_One.className}>
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }

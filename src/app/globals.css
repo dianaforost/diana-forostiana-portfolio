@@ -29,7 +29,9 @@ body {
     rgb(var(--background-start-rgb)); */
 }
 button,
-a,
+a {
+  cursor: url("../../public/cursor-pointer.png"), pointer;
+}
 img {
   cursor: url("../../public/transparent-cursor.png"), pointer;
 }

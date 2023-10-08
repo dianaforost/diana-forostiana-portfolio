@@ -5,5 +5,9 @@ export const Container = ({
   children: any;
   className: string;
 }) => {
-  return <div className={`container mx-[auto] ${className}`}>{children}</div>;
+  return (
+    <div className={`container mx-[auto] pl-[140px] ${className}`}>
+      {children}
+    </div>
+  );
 };
