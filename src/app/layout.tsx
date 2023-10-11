@@ -12,8 +12,10 @@ export const DESCRIPTION = "Diana Forostiana Portfolio";
 
 export const metadata = {
   title: TITLE,
+  name: TITLE,
   description: DESCRIPTION,
   content: DESCRIPTION,
+  property: "og:title",
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
