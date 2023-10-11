@@ -15,13 +15,376 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+* {
+  box-sizing: border-box;
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  cursor: url("../../public/cursor.png"), pointer;
+}
+button,
+a {
+  cursor: url("../../public/cursor-pointer.png"), pointer;
+}
+img {
+  cursor: url("../../public/transparent-cursor.png"), pointer;
+}
+p,
+label,
+input,
+textarea,
+div > p {
+  cursor: url("../../public/text-cursor.png"), pointer;
+}
+h1,
+h2,
+h3,
+h4 {
+  cursor: url("../../public/bigtext-cursor.png"), pointer;
+}
+.dark-cursor {
+  cursor: url("../../public/dark-cursor.png"), pointer;
+}
+@layer components {
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  .hero-bg-mob {
+    background-image: url(/images/hero-bg-mobile.jpg);
+    background-image: -webkit-image-set(
+      url(/images/hero-bg-mobile.webp) type("image/webp") 1x,
+      url(/images/hero-bg-mobile@2x.webp) type("image/webp") 2x,
+      url(/images/hero-bg-mobile.jpg) 1x,
+      url(/images/hero-bg-mobile@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(/images/hero-bg-mobile.webp) type("image/webp") 1x,
+      url(/images/hero-bg-mobile@2x.webp) type("image/webp") 2x,
+      url(/images/hero-bg-mobile.jpg) 1x,
+      url(/images/hero-bg-mobile@2x.jpg) 2x
+    );
+  }
+  .hero-bg-tab {
+    background-image: url(/images/hero-bg-tablet.jpg);
+    background-image: -webkit-image-set(
+      url(/images/hero-bg-tablet.webp) type("image/webp") 1x,
+      url(/images/hero-bg-tablet@2x.webp) type("image/webp") 2x,
+      url(/images/hero-bg-tablet.jpg) 1x,
+      url(/images/hero-bg-tablet@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(/images/hero-bg-tablet.webp) type("image/webp") 1x,
+      url(/images/hero-bg-tablet@2x.webp) type("image/webp") 2x,
+      url(/images/hero-bg-tablet.jpg) 1x,
+      url(/images/hero-bg-tablet@2x.jpg) 2x
+    );
+  }
+  .hero-bg-desk {
+    background-image: url(/images/hero-bg-laptop.jpg);
+    background-image: -webkit-image-set(
+      url(/images/hero-bg-laptop.webp) type("image/webp") 1x,
+      url(/images/hero-bg-laptop@2x.webp) type("image/webp") 2x,
+      url(/images/hero-bg-laptop.jpg) 1x,
+      url(/images/hero-bg-laptop@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(/images/hero-bg-laptop.webp) type("image/webp") 1x,
+      url(/images/hero-bg-laptop@2x.webp) type("image/webp") 2x,
+      url(/images/hero-bg-laptop.jpg) 1x,
+      url(/images/hero-bg-laptop@2x.jpg) 2x
+    );
+  }
+  @media screen and (min-width: 1535px) {
+    .hero-bg-desk {
+      background-image: url(/images/hero-bg-big.jpg);
+      background-image: -webkit-image-set(
+        url(/images/hero-bg-big.webp) type("image/webp") 1x,
+        url(/images/hero-bg-big@2x.webp) type("image/webp") 2x,
+        url(/images/hero-bg-big.jpg) 1x,
+        url(/images/hero-bg-big@2x.jpg) 2x
+      );
+      background-image: image-set(
+        url(/images/hero-bg-big.webp) type("image/webp") 1x,
+        url(/images/hero-bg-big@2x.webp) type("image/webp") 2x,
+        url(/images/hero-bg-big.jpg) 1x,
+        url(/images/hero-bg-big@2x.jpg) 2x
+      );
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    .hero-bg-desk {
+      background-image: url(/images/hero-bg-large.jpg);
+      background-image: -webkit-image-set(
+        url(/images/hero-bg-large.webp) type("image/webp") 1x,
+        url(/images/hero-bg-large@2x.webp) type("image/webp") 2x,
+        url(/images/hero-bg-large.jpg) 1x,
+        url(/images/hero-bg-large@2x.jpg) 2x
+      );
+      background-image: image-set(
+        url(/images/hero-bg-large.webp) type("image/webp") 1x,
+        url(/images/hero-bg-large@2x.webp) type("image/webp") 2x,
+        url(/images/hero-bg-large.jpg) 1x,
+        url(/images/hero-bg-large@2x.jpg) 2x
+      );
+    }
+  }
+  .skills-bg-mob {
+    background-image: url(/images/skills-bg-mobile.jpg);
+    background-image: -webkit-image-set(
+      url(/images/skills-bg-mobile.webp) type("image/webp") 1x,
+      url(/images/skills-bg-mobile@2x.webp) type("image/webp") 2x,
+      url(/images/skills-bg-mobile.jpg) 1x,
+      url(/images/skills-bg-mobile@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(/images/skills-bg-mobile.webp) type("image/webp") 1x,
+      url(/images/skills-bg-mobile@2x.webp) type("image/webp") 2x,
+      url(/images/skills-bg-mobile.jpg) 1x,
+      url(/images/skills-bg-mobile@2x.jpg) 2x
+    );
+  }
+  .skills-bg-tab {
+    background-image: url(/images/skills-bg-tablet.jpg);
+    background-image: -webkit-image-set(
+      url(/images/skills-bg-tablet.webp) type("image/webp") 1x,
+      url(/images/skills-bg-tablet@2x.webp) type("image/webp") 2x,
+      url(/images/skills-bg-tablet.jpg) 1x,
+      url(/images/skills-bg-tablet@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(/images/skills-bg-tablet.webp) type("image/webp") 1x,
+      url(/images/skills-bg-tablet@2x.webp) type("image/webp") 2x,
+      url(/images/skills-bg-tablet.jpg) 1x,
+      url(/images/skills-bg-tablet@2x.jpg) 2x
+    );
+  }
+  .skills-bg-desk {
+    background-image: url(/images/skills-bg-laptop.jpg);
+    background-image: -webkit-image-set(
+      url(/images/skills-bg-laptop.webp) type("image/webp") 1x,
+      url(/images/skills-bg-laptop@2x.webp) type("image/webp") 2x,
+      url(/images/skills-bg-laptop.jpg) 1x,
+      url(/images/skills-bg-laptop@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(/images/skills-bg-laptop.webp) type("image/webp") 1x,
+      url(/images/skills-bg-laptop@2x.webp) type("image/webp") 2x,
+      url(/images/skills-bg-laptop.jpg) 1x,
+      url(/images/skills-bg-laptop@2x.jpg) 2x
+    );
+  }
+  @media screen and (min-width: 1535px) {
+    .skills-bg-desk {
+      background-image: url(/images/skills-bg-big.jpg);
+      background-image: -webkit-image-set(
+        url(/images/skills-bg-big.webp) type("image/webp") 1x,
+        url(/images/skills-bg-big@2x.webp) type("image/webp") 2x,
+        url(/images/skills-bg-big.jpg) 1x,
+        url(/images/skills-bg-big@2x.jpg) 2x
+      );
+      background-image: image-set(
+        url(/images/skills-bg-big.webp) type("image/webp") 1x,
+        url(/images/skills-bg-big@2x.webp) type("image/webp") 2x,
+        url(/images/skills-bg-big.jpg) 1x,
+        url(/images/skills-bg-big@2x.jpg) 2x
+      );
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    .skills-bg-desk {
+      background-image: url(/images/skills-bg-large.jpg);
+      background-image: -webkit-image-set(
+        url(/images/skills-bg-large.webp) type("image/webp") 1x,
+        url(/images/skills-bg-large@2x.webp) type("image/webp") 2x,
+        url(/images/skills-bg-large.jpg) 1x,
+        url(/images/skills-bg-large@2x.jpg) 2x
+      );
+      background-image: image-set(
+        url(/images/skills-bg-large.webp) type("image/webp") 1x,
+        url(/images/skills-bg-large@2x.webp) type("image/webp") 2x,
+        url(/images/skills-bg-large.jpg) 1x,
+        url(/images/skills-bg-large@2x.jpg) 2x
+      );
+    }
+  }
+  .contacts-bg-mob {
+    background-image: url(/images/contacts-bg-mobile.jpg);
+    background-image: -webkit-image-set(
+      url(/images/contacts-bg-mobile.webp) type("image/webp") 1x,
+      url(/images/contacts-bg-mobile@2x.webp) type("image/webp") 2x,
+      url(/images/contacts-bg-mobile.jpg) 1x,
+      url(/images/contacts-bg-mobile@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(/images/contacts-bg-mobile.webp) type("image/webp") 1x,
+      url(/images/contacts-bg-mobile@2x.webp) type("image/webp") 2x,
+      url(/images/contacts-bg-mobile.jpg) 1x,
+      url(/images/contacts-bg-mobile@2x.jpg) 2x
+    );
+  }
+  .contacts-bg-tab {
+    background-image: url(/images/contacts-bg-tablet.jpg);
+    background-image: -webkit-image-set(
+      url(/images/contacts-bg-tablet.webp) type("image/webp") 1x,
+      url(/images/contacts-bg-tablet@2x.webp) type("image/webp") 2x,
+      url(/images/contacts-bg-tablet.jpg) 1x,
+      url(/images/contacts-bg-tablet@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(/images/contacts-bg-tablet.webp) type("image/webp") 1x,
+      url(/images/contacts-bg-tablet@2x.webp) type("image/webp") 2x,
+      url(/images/contacts-bg-tablet.jpg) 1x,
+      url(/images/contacts-bg-tablet@2x.jpg) 2x
+    );
+  }
+  .contacts-bg-desk {
+    background-image: url(/images/contacts-bg-laptop.jpg);
+    background-image: -webkit-image-set(
+      url(/images/contacts-bg-laptop.webp) type("image/webp") 1x,
+      url(/images/contacts-bg-laptop@2x.webp) type("image/webp") 2x,
+      url(/images/contacts-bg-laptop.jpg) 1x,
+      url(/images/contacts-bg-laptop@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(/images/contacts-bg-laptop.webp) type("image/webp") 1x,
+      url(/images/contacts-bg-laptop@2x.webp) type("image/webp") 2x,
+      url(/images/contacts-bg-laptop.jpg) 1x,
+      url(/images/contacts-bg-laptop@2x.jpg) 2x
+    );
+  }
+  @media screen and (min-width: 1535px) {
+    .contacts-bg-desk {
+      background-image: url(/images/contacts-bg-big.jpg);
+      background-image: -webkit-image-set(
+        url(/images/contacts-bg-big.webp) type("image/webp") 1x,
+        url(/images/contacts-bg-big@2x.webp) type("image/webp") 2x,
+        url(/images/contacts-bg-big.jpg) 1x,
+        url(/images/contacts-bg-big@2x.jpg) 2x
+      );
+      background-image: image-set(
+        url(/images/contacts-bg-big.webp) type("image/webp") 1x,
+        url(/images/contacts-bg-big@2x.webp) type("image/webp") 2x,
+        url(/images/contacts-bg-big.jpg) 1x,
+        url(/images/contacts-bg-big@2x.jpg) 2x
+      );
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    .contacts-bg-desk {
+      background-image: url(/images/contacts-bg-large.jpg);
+      background-image: -webkit-image-set(
+        url(/images/contacts-bg-large.webp) type("image/webp") 1x,
+        url(/images/contacts-bg-large@2x.webp) type("image/webp") 2x,
+        url(/images/contacts-bg-large.jpg) 1x,
+        url(/images/contacts-bg-large@2x.jpg) 2x
+      );
+      background-image: image-set(
+        url(/images/contacts-bg-large.webp) type("image/webp") 1x,
+        url(/images/contacts-bg-large@2x.webp) type("image/webp") 2x,
+        url(/images/contacts-bg-large.jpg) 1x,
+        url(/images/contacts-bg-large@2x.jpg) 2x
+      );
+    }
+  }
+}
+.inf {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-animation: marquee 3s linear infinite;
+  animation: marquee 3s linear infinite;
+}
+.link:hover .inf,
+.link:focus .inf {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  transition-duration: 0.6s;
+}
+@-webkit-keyframes marquee {
+  0% {
+    transform: translate3d(calc(-25% + 1rem), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(calc(-50% + 1rem), 0, 0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(calc(-25% + 1rem), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(calc(-50% + 1rem), 0, 0);
+  }
+}
+
+.follow-button {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  cursor: none;
+}
+.follow-button:hover,
+.follow-button:focus {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+}
+.card__content {
+  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+  color: rgb(10, 5, 7);
+  border-radius: 1em;
+  overflow: hidden;
+
+  align-items: stretch;
+  outline: var(--outline-width) solid lime;
+}
+@media screen and (min-width: 1440px) {
+  .card__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+#card_0 {
+  --index: 1;
+}
+
+#card_1 {
+  --index: 2;
+}
+
+#card_2 {
+  --index: 3;
+}
+
+#card_3 {
+  --index: 4;
+}
+#card_4 {
+  --index: 5;
+}
+.card {
+  position: sticky;
+  top: 0;
+  padding-top: calc(var(--index) * 1rem);
 }
