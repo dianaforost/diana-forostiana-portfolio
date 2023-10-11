@@ -13,8 +13,9 @@ export default function ProjectsSection() {
           <h2 className="text-[44px] sm:text-[76px] md:text-[92px]">{title}</h2>
           {projectsList.map((project, index) => (
             <div
-              className="w-full bg-white md:sticky top-[0] rounded-[1rem]"
+              className="card w-full md:sticky top-[0] rounded-[1rem]"
               key={index}
+              id={`card_${index}`}
             >
               <ScrollFadeIn>
                 <div className="flex flex-col md:min-h-[556px] py-[1rem] px-[1rem] md:p-[1rem] card__content justify-between">

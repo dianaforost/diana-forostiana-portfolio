@@ -362,3 +362,26 @@ h4 {
     grid-template-columns: 1fr 1fr;
   }
 }
+#card_0 {
+  --index: 1;
+}
+
+#card_1 {
+  --index: 2;
+}
+
+#card_2 {
+  --index: 3;
+}
+
+#card_3 {
+  --index: 4;
+}
+#card_4 {
+  --index: 5;
+}
+.card {
+  position: sticky;
+  top: 0;
+  padding-top: calc(var(--index) * 1rem);
+}
