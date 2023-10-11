@@ -174,5 +174,19 @@
     "sendBtn": "Send",
     "sendBtnSuccess": "Sended",
     "sendBtnError": "Error"
+  },
+  "footer": {
+    "title": "Footer",
+    "socialTitle": "Social media",
+    "footerList": [
+      {
+        "title": "Contacts",
+        "number": "Phone number",
+        "phone": ["+380 (97) 537 21 74", "+48 797638432"],
+        "email": "Email",
+        "emailto": "dianaforost@gmail.com"
+      }
+    ],
+    "d": "D"
   }
 }
