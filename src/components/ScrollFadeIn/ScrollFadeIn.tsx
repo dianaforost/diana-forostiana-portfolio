@@ -48,7 +48,7 @@ const ScrollFadeIn: React.FC<ScrollFadeInProps> = ({
       <style jsx>{`
         .scroll-fade-in {
           opacity: 0;
-          transition: opacity 1s ease-in-out;
+          transition: opacity 500ms ease-in-out;
         }
 
         .scroll-fade-in.visible {

@@ -41,6 +41,9 @@ h3,
 h4 {
   cursor: url("../../public/bigtext-cursor.png"), pointer;
 }
+.dark-cursor {
+  cursor: url("../../public/dark-cursor.png"), pointer;
+}
 @layer components {
   .visually-hidden {
     position: absolute;
