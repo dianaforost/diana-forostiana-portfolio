@@ -1,37 +1,20 @@
 import { Container } from "@/components/Container/Container";
 import ScrollFadeIn from "@/components/ScrollFadeIn/ScrollFadeIn";
-const skills = [
-  "Html",
-  "Css",
-  "SASS",
-  "JavaScript",
-  "React",
-  "Redux",
-  "Redux Toolkit",
-  "Next.js",
-  "Tailwind Css",
-  "Typescript",
-  "Git",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
-  "GitHub",
-  "RestAPI",
-  "Postman",
-  "Vercel",
-];
+import data from "../../data/data.json";
 
 export default function SkillsSection() {
+  const { skills } = data;
+  const { title, skillsList } = skills;
   return (
     <section className="skills-bg-mob sm:skills-bg-tab md:skills-bg-desk bg-cover bg-center bg-fixed text-center py-[60px] sm:py-[80px] md:py-[120px] min-h-screen text-white">
       <Container className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px] md:pl-[140px]">
         <ScrollFadeIn>
           <div className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px]">
             <h2 className="text-[44px] sm:text-[76px] md:text-[92px]">
-              Skills
+              {title}
             </h2>
             <ul className="flex flex-wrap gap-[15px]">
-              {skills.map((skill, index) => (
+              {skillsList.map((skill, index) => (
                 <li
                   key={index}
                   className="link group relative uppercase p-[1.2em] border-[1.5px] border-solid rounded-[1.5em] border-white inline-block bg-gray backdrop-blur-xl"

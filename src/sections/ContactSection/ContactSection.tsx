@@ -14,7 +14,7 @@ import { useEffect, useState } from "react";
 import { sendEmail } from "../../utils/sendEmail";
 
 export default function ContactsSection() {
-  const { form } = data;
+  const { form, contacts } = data;
   const {
     subject,
     email,
@@ -75,7 +75,6 @@ export default function ContactsSection() {
     setLoading(true);
     try {
       await sendEmail(formData);
-      // await sendMessageToTelegram(formData);
       setFormStatus("success");
       setTimeout(() => {
         setFormStatus(null);
@@ -99,7 +98,7 @@ export default function ContactsSection() {
         <ScrollFadeIn>
           <div className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px]">
             <h2 className="text-[44px] sm:text-[76px] md:text-[92px]">
-              Contact me
+              {contacts.title}
             </h2>
             <form
               onSubmit={handleSubmit(onSubmit)}
