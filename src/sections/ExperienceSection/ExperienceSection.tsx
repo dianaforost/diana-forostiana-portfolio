@@ -25,7 +25,7 @@ export default function ExperienceSection() {
                   <div className="text-left">
                     <a
                       href={experienceItem.companyLink}
-                      className="text-[24px] sm:text-[32] md:text-[36px] border-b-[3px] border-black hover:border-darkGray"
+                      className="text-[24px] sm:text-[32] md:text-[36px] border-b-[3px] border-black hover:text-darkGray focus:text-darkGray hover:border-darkGray focus:border-darkGray transition duration-300"
                     >
                       {experienceItem.company}
                     </a>
@@ -34,7 +34,7 @@ export default function ExperienceSection() {
                     </p>
                     <a
                       href={experienceItem.link}
-                      className="text-[16px] sm:text-[18px] md:text-[20] border-b-[3px] border-black 676767"
+                      className="text-[16px] sm:text-[18px] md:text-[20] border-b-[3px] border-black hover:text-darkGray focus:text-darkGray hover:border-darkGray focus:border-darkGray transition duration-300"
                     >
                       {experienceItem.position}
                     </a>
