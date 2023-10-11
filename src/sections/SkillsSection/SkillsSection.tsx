@@ -23,7 +23,7 @@ const skills = [
 
 export default function SkillsSection() {
   return (
-    <section className="skills-section skills-bg-mob sm:skills-bg-tab md:skills-bg-desk bg-cover bg-center bg-fixed text-center py-[60px] sm:py-[80px] md:py-[120px] md:min-h-screen text-white">
+    <section className="skills-bg-mob sm:skills-bg-tab md:skills-bg-desk bg-cover bg-center bg-fixed text-center py-[60px] sm:py-[80px] md:py-[120px] min-h-screen text-white">
       <Container className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px]">
         <ScrollFadeIn>
           <div className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px]">
@@ -34,7 +34,7 @@ export default function SkillsSection() {
               {skills.map((skill, index) => (
                 <li
                   key={index}
-                  className="link group relative uppercase p-[1.2em] border-[1.5px] border-solid rounded-[1.5em] border-[#C852FF] inline-block bg-gray backdrop-blur-xl"
+                  className="link group relative uppercase p-[1.2em] border-[1.5px] border-solid rounded-[1.5em] border-white inline-block bg-gray backdrop-blur-xl"
                 >
                   <span className="group-hover:opacity-0 opacity-100">
                     {skill}

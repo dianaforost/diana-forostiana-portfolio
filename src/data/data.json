@@ -1,0 +1,16 @@
+{
+  "form": {
+    "title": "Contact me",
+    "email": "E-mail",
+    "emailInvalid": "Incorrect email",
+    "subject": "Subject",
+    "subjectPlaceholder": "Something something",
+    "subjectInvalid": "Incorrect subject",
+    "content": "Content",
+    "contentPlaceholder": "Something something something something something something something something something something something something ",
+    "contentInvalid": "Incorrect content",
+    "sendBtn": "Send",
+    "sendBtnSuccess": "Sended",
+    "sendBtnError": "Error"
+  }
+}

@@ -111,36 +111,34 @@ export default function ProjectsSection() {
               key={index}
             >
               <ScrollFadeIn>
-                <div className="flex md:min-h-[396px] card__content flex-col md:flex-row justify-between">
-                  <div className="py-[1rem] px-[1rem] md:p-[1rem]">
-                    <h3 className="uppercase text-[32px] sm:text-[56px] md:text-[60px]">
-                      {project.title}
-                    </h3>
-                    <ReadMore text={project.text} maxLength={250} />
-                    <p className="italic mt-[5px]">{project.type}</p>
-                    <div className="flex flex-wrap gap-x-4 gap-y-4 mt-[1rem]">
-                      {project.languages?.map((language, index) => (
-                        <div
-                          key={index}
-                          className="uppercase border-l-4 p-[0.6rem] rounded-l-[3px] border-solid border-[#C852FF]"
-                        >
-                          <p>{language}</p>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="flex gap-[15px] sm:gap-[20px] md:gap-[25px] mt-[25px] sm:mt-[30px] md:mt-[35px]">
-                      {project.links?.map((link, index) => (
-                        <a
-                          href={link}
-                          key={index}
-                          target="_blank"
-                          referrerPolicy="no-referrer"
-                          className="follow-button border-[3px] border-solid border-[#C852FF] py-[20px] px-[3%] hover:bg-[#C852FF40] focus:bg-[#C852FF40]"
-                        >
-                          {project.linksText[index]}
-                        </a>
-                      ))}
-                    </div>
+                <div className="flex flex-col md:min-h-[556px] py-[1rem] px-[1rem] md:p-[1rem] card__content justify-between">
+                  <h3 className="uppercase text-[32px] sm:text-[56px] md:text-[60px]">
+                    {project.title}
+                  </h3>
+                  <ReadMore text={project.text} maxLength={250} />
+                  <p className="italic mt-[5px]">{project.type}</p>
+                  <div className="flex flex-wrap gap-x-4 gap-y-4 mt-[1rem]">
+                    {project.languages?.map((language, index) => (
+                      <div
+                        key={index}
+                        className="uppercase border-l-4 p-[0.6rem] rounded-l-[3px] border-solid border-[#C852FF]"
+                      >
+                        <p>{language}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex gap-[15px] sm:gap-[20px] md:gap-[25px] mt-[25px] sm:mt-[30px] md:mt-[35px]">
+                    {project.links?.map((link, index) => (
+                      <a
+                        href={link}
+                        key={index}
+                        target="_blank"
+                        referrerPolicy="no-referrer"
+                        className="follow-button border-[3px] border-solid border-[#C852FF] py-[20px] px-[3%] hover:bg-[#C852FF40] focus:bg-[#C852FF40]"
+                      >
+                        {project.linksText[index]}
+                      </a>
+                    ))}
                   </div>
                 </div>
               </ScrollFadeIn>
