@@ -183,6 +183,7 @@
         "title": "Contacts",
         "number": "Phone number",
         "phone": ["+380 (97) 537 21 74", "+48 797638432"],
+        "phoneLinks": ["+380975372174", "+48797638432"],
         "email": "Email",
         "emailto": "dianaforost@gmail.com"
       }

@@ -23,7 +23,7 @@ const TelegramIcon = ({
           />
         </g>
         <defs>
-          <clipPath id="a">
+          <clipPath id="b">
             <path fill="#fff" d="M0 0h45v45H0z" />
           </clipPath>
         </defs>
