@@ -14,8 +14,6 @@ export const metadata = {
   title: TITLE,
   name: TITLE,
   description: DESCRIPTION,
-  content: DESCRIPTION,
-  property: "og:title",
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
@@ -25,6 +23,7 @@ export const metadata = {
     type: "website",
   },
   metadataBase: new URL(BASE_URL),
+  manifest: "/meta/manifest.webmanifest",
   robots: "all",
   twitter: {
     card: "summary_large_image",
