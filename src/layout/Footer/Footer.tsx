@@ -7,7 +7,7 @@ import TelegramIcon from "@/icons/TelegramIcon";
 const Footer = () => {
   return (
     <footer className="min-h-[50vh] z-20 relative bg-white">
-      <Container className="flex justify-around py-[40px] sm:py-[60px] md:py-[80px]">
+      <Container className="flex flex-col gap-[15px] md:flex-row justify-around py-[40px] sm:py-[60px] md:py-[80px]">
         <h2 className="visually-hidden">Footer</h2>
         <div className="flex flex-col gap-[10px]">
           <h3 className="text-[24px]">Contacts</h3>
@@ -53,35 +53,35 @@ const Footer = () => {
           <ul className="flex gap-[5px] sm:gap-[15px] md:gap-[20px]">
             <li>
               <GitHubIcon
-                className="fill-[#7838FF] hover:fill-[#5100FF] focus:fill-[#5100FF] transition duration-300"
+                className="fill-violet hover:fill-darkViolet focus:fill-darkViolet transition duration-300"
                 width={45}
                 height={45}
               />
             </li>
             <li>
               <LinkedInIcon
-                className="fill-[#7838FF] hover:fill-[#5100FF] focus:fill-[#5100FF] transition duration-300"
+                className="fill-violet hover:fill-darkViolet focus:fill-darkViolet transition duration-300"
                 width={45}
                 height={45}
               />
             </li>
             <li>
               <TelegramIcon
-                className="fill-[#7838FF] hover:fill-[#5100FF] focus:fill-[#5100FF] transition duration-300"
+                className="fill-violet hover:fill-darkViolet focus:fill-darkViolet transition duration-300"
                 width={45}
                 height={45}
               />
             </li>
             <li>
               <GmailIcon
-                className="fill-[#7838FF] hover:fill-[#5100FF] focus:fill-[#5100FF] transition duration-300"
+                className="fill-violet hover:fill-darkViolet focus:fill-darkViolet transition duration-300"
                 width={45}
                 height={45}
               />
             </li>
           </ul>
         </div>
-        <p className="text-[200px] text-[#9E9E9E26] absolute bottom-[0] right-[0]">
+        <p className="text-[200px] text-lighterGray absolute bottom-[0] right-[0]">
           D
         </p>
       </Container>

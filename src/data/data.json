@@ -146,13 +146,17 @@
     "experienceList": [
       {
         "company": "SoftRyzen",
+        "companyLink": "https://www.linkedin.com/company/softryzen/?trk=similar-pages",
         "date": "September 2023 - October 2023 · 2 months",
-        "position": "TRAINEE FRONT-END DEVELOPER"
+        "position": "TRAINEE FRONT-END DEVELOPER",
+        "link": "https://imconsulting.com.ua"
       },
       {
         "company": "Baza Trainee Ukraine",
+        "companyLink": "https://www.linkedin.com/company/baza-trainee-ukraine/",
         "date": "May 2023 - July 2023 · 3 months",
-        "position": "TRAINEE FRONT-END DEVELOPER"
+        "position": "TRAINEE FRONT-END DEVELOPER",
+        "link": "https://baza-trainee-landing.vercel.app/ua"
       }
     ]
   },

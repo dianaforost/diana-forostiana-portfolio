@@ -93,7 +93,10 @@ export default function ContactsSection() {
   };
 
   return (
-    <section className="contacts-bg-mob sm:contacts-bg-tab md:contacts-bg-desk bg-cover bg-center bg-fixed py-[60px] sm:py-[80px] md:py-[120px] text-center text-white min-h-screen">
+    <section
+      id="contacts-section"
+      className="contacts-bg-mob sm:contacts-bg-tab md:contacts-bg-desk bg-cover bg-center bg-fixed py-[60px] sm:py-[80px] md:py-[120px] text-center text-white min-h-screen"
+    >
       <Container className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px] md:pl-[140px]">
         <ScrollFadeIn>
           <div className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px]">

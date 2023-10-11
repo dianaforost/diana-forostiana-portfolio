@@ -27,7 +27,7 @@ export default function ProjectsSection() {
                     {project.languages?.map((language, index) => (
                       <div
                         key={index}
-                        className="uppercase border-l-4 p-[0.6rem] rounded-l-[3px] border-solid border-[#C852FF]"
+                        className="uppercase border-l-4 p-[0.6rem] rounded-l-[3px] border-solid border-pink"
                       >
                         <p>{language}</p>
                       </div>
@@ -40,7 +40,7 @@ export default function ProjectsSection() {
                         key={index}
                         target="_blank"
                         referrerPolicy="no-referrer"
-                        className="follow-button border-[3px] border-solid border-[#C852FF] py-[20px] px-[3%] hover:bg-[#C852FF40] focus:bg-[#C852FF40]"
+                        className="follow-button border-[3px] border-solid border-pink py-[20px] px-[3%] hover:bg-darkPink focus:bg-darkPink"
                       >
                         {project.linksText[index]}
                       </a>

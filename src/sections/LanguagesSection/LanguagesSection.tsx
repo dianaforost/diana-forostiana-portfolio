@@ -17,10 +17,10 @@ export default function LanguagesSection() {
               {languagesList.map((language, index) => (
                 <li key={index}>
                   <div className="flex flex-col gap-[16px]">
-                    <h3 className="text-[32px] sm:text-[56] md:text-[72px] text-[#4F4F4F]">
+                    <h3 className="text-[32px] sm:text-[56] md:text-[72px] text-grayText">
                       {language.language}
                     </h3>
-                    <p className="text-[#7879F1] text-[24px]">
+                    <p className="text-purpleText text-[24px]">
                       {language.level}
                     </p>
                   </div>

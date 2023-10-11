@@ -20,7 +20,7 @@ export default function EducationSection() {
                   <h3 className="text-[24px] sm:text-[32] md:text-[36px]">
                     {school}
                   </h3>
-                  <p className="text-[16px] sm:text-[18px] md:text-[20] text-[#242424]">
+                  <p className="text-[16px] sm:text-[18px] md:text-[20] text-lightGray">
                     {date}
                   </p>
                   <p className="text-[16px] sm:text-[18px] md:text-[20]">

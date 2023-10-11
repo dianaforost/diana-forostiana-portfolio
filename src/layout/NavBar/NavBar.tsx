@@ -9,21 +9,21 @@ const NavBar = () => {
       <ul className="hidden md:flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px]">
         <li>
           <GitHubIcon
-            className="fill-[#CEB7FF] hover:fill-[#B08AFF] focus:fill-[#B08AFF] transition duration-300"
+            className="fill-lightVaiolet hover:fill-darkerViolet focus:fill-darkerViolet transition duration-300"
             width={45}
             height={45}
           />
         </li>
         <li>
           <LinkedInIcon
-            className="fill-[#CEB7FF] hover:fill-[#B08AFF] focus:fill-[#B08AFF] transition duration-300"
+            className="fill-lightVaiolet hover:fill-darkerViolet focus:fill-darkerViolet transition duration-300"
             width={45}
             height={45}
           />
         </li>
         <li>
           <TelegramIcon
-            className="fill-[#CEB7FF] hover:fill-[#B08AFF] focus:fill-[#B08AFF] transition duration-300"
+            className="fill-lightVaiolet hover:fill-darkerViolet focus:fill-darkerViolet transition duration-300"
             width={45}
             height={45}
           />

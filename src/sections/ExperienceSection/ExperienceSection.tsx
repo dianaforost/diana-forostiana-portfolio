@@ -16,22 +16,28 @@ export default function ExperienceSection() {
               </h2>
               <p>5 mounth</p>
             </div>
-            <ul className="flex flex-col md:flex-row justify-around">
+            <ul className="flex flex-col items-start md:flex-row gap-[15px] justify-around">
               {experienceList.map((experienceItem, index) => (
                 <li
                   key={index}
                   className="flex flex-col items-center md:items-start md:flex-row gap-[15px] sm:gap-[20px] md:gap-[25px]"
                 >
                   <div className="text-left">
-                    <h3 className="text-[24px] sm:text-[32] md:text-[36px]">
+                    <a
+                      href={experienceItem.companyLink}
+                      className="text-[24px] sm:text-[32] md:text-[36px] border-b-[3px] border-black hover:border-darkGray"
+                    >
                       {experienceItem.company}
-                    </h3>
-                    <p className="text-[16px] sm:text-[18px] md:text-[20] text-[#242424]">
+                    </a>
+                    <p className="text-[16px] sm:text-[18px] md:text-[20] text-lightGray">
                       {experienceItem.date}
                     </p>
-                    <p className="text-[16px] sm:text-[18px] md:text-[20]">
+                    <a
+                      href={experienceItem.link}
+                      className="text-[16px] sm:text-[18px] md:text-[20] border-b-[3px] border-black 676767"
+                    >
                       {experienceItem.position}
-                    </p>
+                    </a>
                   </div>
                 </li>
               ))}
