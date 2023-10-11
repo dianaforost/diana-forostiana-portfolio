@@ -10,9 +10,10 @@ export const BASE_URL = "https://diana-forostiana-portfolio.vercel.app/";
 export const TITLE = "Diana Forostiana";
 export const DESCRIPTION = "Diana Forostiana Portfolio";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: TITLE,
   description: DESCRIPTION,
+  content: DESCRIPTION,
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
