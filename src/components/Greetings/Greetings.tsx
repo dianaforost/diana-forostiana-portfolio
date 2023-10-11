@@ -28,7 +28,7 @@ const Greetings: React.FC = () => {
       setCurrentLanguageIndex(nextLanguageIndex);
     };
 
-    const intervalId = setInterval(updateGreeting, 5000);
+    const intervalId = setInterval(updateGreeting, 3000);
 
     return () => clearInterval(intervalId);
   }, [currentLanguageIndex]);

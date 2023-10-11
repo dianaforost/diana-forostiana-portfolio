@@ -39,7 +39,7 @@ export const InputField = ({
           errors[name] ? "text-red" : ""
         } input-field bg-transparent border-[1px] border-solid border-bgColor p-[8px] md:p-[12px] text-[16px] font-light leading-[20px]  md:text-[20px] md:leading-[24px] xl:text-[24px] xl:leading-[29px]`}
         placeholder={placeholder}
-        autoComplete="true"
+        autoComplete={name}
       />
     )}
 

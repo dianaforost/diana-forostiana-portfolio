@@ -25,7 +25,7 @@ const Footer = () => {
                       {item.phone.map((phoneNumber, phoneIndex) => (
                         <li key={phoneIndex}>
                           <a
-                            href={`tel:${phoneNumber}`}
+                            href={`tel:${item.phoneLinks[phoneIndex]}`}
                             className="dark-cursor hover:text-darkGray focus:text-darkGray hover:border-b-[1px] hover:border-darkGray hover:pb-[1px] focus:border-b-[1px] focus:border-darkGray focus:pb-[1px] transition duration-300"
                           >
                             {phoneNumber}
