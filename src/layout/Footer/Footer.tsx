@@ -18,7 +18,7 @@ const Footer = () => {
             <ul className="flex flex-col gap-[5px] sm:gap-[15px] md:gap-[20px]">
               {item.number && (
                 <li>
-                  <h4>{item.number}</h4>
+                  <h4 className="text-purpleText">{item.number}</h4>
                   <ul>
                     {item.phone.map((phoneNumber, phoneIndex) => (
                       <li key={phoneIndex}>
@@ -35,7 +35,7 @@ const Footer = () => {
               )}
               {item.email && (
                 <li>
-                  <h4>Email</h4>
+                  <h4 className="text-purpleText">{item.email}</h4>
                   <ul>
                     <li>
                       <a
