@@ -1,10 +1,18 @@
-const LinkedInIcon = ({ width, height }: { width: number; height: number }) => {
+const LinkedInIcon = ({
+  width,
+  height,
+  className,
+}: {
+  width: number;
+  height: number;
+  className: string;
+}) => {
   return (
     <a href="https://www.linkedin.com/in/diana-forostiana/">
       <svg
         width={width}
         height={height}
-        className="fill-[#CEB7FF] hover:fill-[#B08AFF] focus:fill-[#B08AFF]"
+        className={className}
         viewBox="0 0 45 45"
         xmlns="http://www.w3.org/2000/svg"
       >

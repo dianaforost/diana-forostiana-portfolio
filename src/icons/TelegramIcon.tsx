@@ -1,10 +1,18 @@
-const TelegramIcon = ({ width, height }: { width: number; height: number }) => {
+const TelegramIcon = ({
+  width,
+  height,
+  className,
+}: {
+  width: number;
+  height: number;
+  className: string;
+}) => {
   return (
     <a href="https://t.me/dianaforost">
       <svg
         width={width}
         height={height}
-        className="fill-[#CEB7FF] hover:fill-[#B08AFF]"
+        className={className}
         xmlns="http://www.w3.org/2000/svg"
       >
         <g clipPath="url(#a)">

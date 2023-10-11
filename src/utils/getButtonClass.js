@@ -15,7 +15,7 @@ export default function getButtonClasses(formStatus, loading) {
   if (loading || formStatus === "error") {
     classes += " cursor-not-allowed ";
   } else {
-    classes += "cursor-pointer ";
+    classes += "";
   }
 
   classes +=

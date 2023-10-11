@@ -20,13 +20,6 @@
 }
 body {
   cursor: url("../../public/cursor.png"), pointer;
-  /* color: rgb(var(--foreground-rgb)); */
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
 }
 button,
 a {
@@ -36,6 +29,9 @@ img {
   cursor: url("../../public/transparent-cursor.png"), pointer;
 }
 p,
+label,
+input,
+textarea,
 div > p {
   cursor: url("../../public/text-cursor.png"), pointer;
 }
@@ -46,6 +42,19 @@ h4 {
   cursor: url("../../public/bigtext-cursor.png"), pointer;
 }
 @layer components {
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
   .hero-bg-mob {
     background-image: url(/images/hero-bg-mobile.jpg);
     background-image: -webkit-image-set(
@@ -331,12 +340,12 @@ h4 {
   transition: transform 0.2s;
 }
 .fade-in {
-  opacity: 0; /* Начальное состояние - элемент скрыт */
-  transition: opacity 0.5s ease-in-out; /* Плавная анимация изменения прозрачности */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .fade-in.active {
-  opacity: 1; /* Конечное состояние - элемент полностью видим */
+  opacity: 1;
 }
 .card__content {
   box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);

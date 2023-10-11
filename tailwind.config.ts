@@ -50,6 +50,7 @@ const config: Config = {
         success: "#44FF57",
         grayBorder: "#C852FF",
         hoverText: "#CDCDCD",
+        darkGray: "#676767",
       },
     },
   },

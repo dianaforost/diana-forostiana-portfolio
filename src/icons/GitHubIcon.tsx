@@ -1,8 +1,16 @@
-const GitHubIcon = ({ width, height }: { width: number; height: number }) => {
+const GitHubIcon = ({
+  width,
+  height,
+  className,
+}: {
+  width: number;
+  height: number;
+  className: string;
+}) => {
   return (
     <a href="https://github.com/dianaforost">
       <svg
-        className="fill-[#CEB7FF] hover:fill-[#B08AFF] focus:fill-[#B08AFF]"
+        className={className}
         width={width}
         height={height}
         viewBox="0 0 47 45"

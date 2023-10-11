@@ -8,7 +8,7 @@ const languages = [
 export default function LanguagesSection() {
   return (
     <section className="py-[60px] sm:py-[80px] md:py-[120px] text-center">
-      <Container className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px]">
+      <Container className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px] md:pl-[140px]">
         <ScrollFadeIn>
           <div className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px]">
             <h2 className="text-[44px] sm:text-[76px] md:text-[92px]">

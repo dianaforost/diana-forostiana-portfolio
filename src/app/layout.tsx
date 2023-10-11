@@ -2,6 +2,7 @@ import NavBar from "@/layout/NavBar/NavBar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { RocknRoll_One } from "next/font/google";
+import Footer from "@/layout/Footer/Footer";
 
 const rocknRoll_One = RocknRoll_One({ weight: "400", subsets: ["latin"] });
 
@@ -16,10 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="uk">
       <body className={rocknRoll_One.className}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

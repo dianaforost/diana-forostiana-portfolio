@@ -101,7 +101,7 @@ export default function ProjectsSection() {
   return (
     <>
       <section className="bg-white py-[80px] sm:py-[120px] md:py-[140px]">
-        <Container className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px]">
+        <Container className="flex flex-col gap-[24px] sm:gap-[30px] md:gap-[42px] md:pl-[140px]">
           <h2 className="text-[44px] sm:text-[76px] md:text-[92px]">
             Projects
           </h2>
